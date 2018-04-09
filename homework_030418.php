@@ -114,7 +114,7 @@ echo '<hr>';
 	var_dump($array);
 	echo '</pre>';
 
-	echo 'Замен сделано $i';
+	echo "Замен сделано $i";
 
 	
 //+ 5 task array_sum (своя реализация функции php)
