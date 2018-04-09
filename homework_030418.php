@@ -120,6 +120,7 @@ echo '<hr>';
 //+ 5 task array_sum (своя реализация функции php)
 
 
+    /*
     $array = [1, 10, 9, 15, 5, 13];
 
 	$arr_sum = 0; //начальная сумма массива =0
@@ -130,6 +131,21 @@ echo '<hr>';
 
 
     echo "<hr>";
+    */
+
+    function arr_sum_my($array)
+    {
+        $arr_sum = 0; //начальная сумма массива =0
+        foreach ($array as $elem) {
+            $arr_sum = $arr_sum + $elem;
+        }
+        return $arr_sum; // итоговая сумма всех элементов массива
+    }
+
+    $arr = [1, 10, 9, 15, 5, 13];
+
+    echo arr_sum_my($arr);
+
 
 //- 6 task in_array - Проверяет, присутствует ли в массиве значение (своя реализация функции php)
 
