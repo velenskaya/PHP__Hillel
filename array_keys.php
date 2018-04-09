@@ -6,7 +6,7 @@ function array_keys_my($arr)
 {
 	$array = [];              // объявляем массив, который будем заполнять ключами
 	is_array($arr);           // проверка - является ди переданный параметр  массивом           
-	foreach($arr as $key => $name) 
+	foreach ($arr as $key => $name) 
 		{
 			$array[] = $key;  // проходим по массиву и берем его ключи
 		}
