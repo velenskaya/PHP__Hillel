@@ -9,7 +9,7 @@ function count_my($arr)
     	if ($key >= 0) {
            $i++;
         } 
-    } return "Количество элементов в массиве $i";
+    } return $i;
 } 
 
 $array = [18,25,13, 17,90];
