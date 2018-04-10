@@ -30,7 +30,7 @@ function array_keys_my($arr)
 			$array[] = $key;  // проходим по массиву и берем его ключи
 		}
 		return $array;         
-     } else "Это не массив";   
+     } else echo "Это не массив";   
 }
 
 $new_arr = [13, 21, 13,];
@@ -43,6 +43,7 @@ echo '</pre>';
 echo '<pre>';
 var_dump(array_keys_my($new_arr2));
 echo '</pre>';
+
 
 
 
