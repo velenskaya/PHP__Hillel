@@ -43,12 +43,12 @@ class Fibonachi
     public function fibo($a, $b, $k)
     {
             $res = '';
-            $res .= $a.';'; //ýòîò êîä ïîëíîñòüþ ýêâèâàëåíòåí êîäó $res = $res . 'a';
+            $res .= $a.';'; // $res = $res . 'a';
             $res .= $b.';';
             
             for ($i = 0; $i < $k; $i++) {
             $c = $a + $b; 
-            $res .= $c.';'; //ýòîò êîä ïîëíîñòüþ ýêâèâàëåíòåí êîäó $res = $res . 'c';
+            $res .= $c.';'; // $res = $res . 'c';
             $a = $b; 
             $b = $c;
         }
