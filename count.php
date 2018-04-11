@@ -9,13 +9,12 @@ function count_my($arr)
     } else {
       $i = 0;  
       foreach ($arr as $key=>$elem) {
-    	if ($key >= 0) {
-           $i++;
-         } 
-       } 
+    	    $i++;
+        } 
         return $i;
     }
     
 } 
+
 $array = [18,25,13, 17,90,77,33];
 echo count_my($array);
