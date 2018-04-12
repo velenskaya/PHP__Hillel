@@ -9,12 +9,12 @@ function my_in_array ($b, $array)
 {
    foreach ($array as $name) {
        if ($name == $b) {
-         $result = "Число ".$b. " в массиве есть"."<br>";
+         $result = "Значение ".$b. " в массиве есть"."<br>";
          return $result;
        } 
    }
        if (!isset($result)){  
-            echo "Числа ".$b. " в массиве нет"."<br>"; 
+            echo "Значение ".$b. " в массиве отсутствует"."<br>"; 
        }
 }
 
