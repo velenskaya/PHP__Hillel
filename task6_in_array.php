@@ -5,25 +5,25 @@
 // bool in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] )
 
 
-function my_in_array ($b, $array)
+function my_in_array ($b, $array, $strikt = false)
 {
-   foreach ($array as $name) {
-       if ($name == $b) {
-         $result = "Значение ".$b. " в массиве есть"."<br>";
-         return $result;
-       } 
-   }
-       if (!isset($result)){  
-            echo "Значение ".$b. " в массиве отсутствует"."<br>"; 
-       }
+	foreach ($array as $name) {
+		if ($strikt === true) {
+			if ($name === $b) {
+       			return true;
+       		}
+		} else {
+			if ($name == $b) {
+       			return true;
+       		}
+		}
+   	}
+    
+    return false;
 }
 
 
 $arr = [1,35,45,76,89];
 $number  = 35;
 
-echo my_in_array ($number, $arr);
-
-
-
-
+var_dump(my_in_array ($number, $arr));
