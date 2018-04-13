@@ -29,4 +29,4 @@ function my_explode($d, $s)
 $s = 'code of function explode ';
 $d = ' ';
 
-var_dump(my_explode($s, $d));
+var_dump(my_explode($d, $s));
