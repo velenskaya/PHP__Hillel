@@ -1,8 +1,7 @@
 ﻿<?php
-//+1 task Написать метод, который выводит все положительные четные числа, которые менее заданного
 
 function myFirst($b) 
-{   $res ='';
+{   $res = '';
     for ($a = 0; $a < $b; $a+=2) {
         $res .= $a.';';
     }
@@ -10,7 +9,7 @@ function myFirst($b)
 }
 
 echo myFirst(20);
-
+echo '<hr>';
 //тоже самое, но в стиле ООП 
 
 class News
@@ -19,34 +18,43 @@ class News
     
     public function myFirst($b) 
     {
-    	for ($a = 0; $a < $b; $a+=2) {
-            echo $a.';';
+        $res = '';
+        for ($a = 0; $a < $b; $a+=2) {
+            $res .= $a.';';
         }
+        return $res;
     }
 }
 
 $obj = new News;
-echo $obj->myFirst(15);
+echo $obj->myFirst(31);
 
 echo '<hr>';
 
 
 // 2 вариант с $this
 
-class News
+class Newss
 {
     public $b;
     
-    public function myFirst() 
-    {
-        for ($a = 0; $a < $this->b; $a+=2) {
-            echo $a.';';
+    public function __construct($m)
+        {
+           $this->b = $m;
         }
+    
+    public function myFirst() 
+    {             
+        $res = '';
+        for ($a = 0; $a < $this->b; $a+=2) {
+            $res .= $a.';';
+        }
+        return $res;
     }
 }
-
-$obj = new News;
-$obj->b = 15;
+$m = 100;
+$obj = new Newss($m);
 echo $obj->myFirst();
 
 echo '<hr>';
+
