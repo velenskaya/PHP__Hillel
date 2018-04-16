@@ -4,43 +4,47 @@
 
 // int strpos ( string $haystack , mixed $needle [, int $offset = 0 ] )
 
-<?php
-
-function my_strpos($haystack, $needle)
+class My_strpos
 {
-	$i = 0;
+	public $haystack;
+	public $needle;
 
-	while ( isset($needle[$i]) ) {
-	
-		$i++;
-	}
+	public function my_strpos()
+	{
+		$rasmerOkna = 0;
 
-	$h = 0;
-
-	while ( isset($haystack[$h]) ) { 
-		
-		$bufer ='';
-
-		for ( $j = $h; $j < $h+$i; $j++ ) {
-			
-			$bufer .= $haystack[$j]; 
+		while ( isset($this->needle[$rasmerOkna]) ) {
+				$rasmerOkna++;
 		}
-        
-        $h++;
-        
-		if ( $bufer == $needle ) {
-			return $h;
 
-		} return false;
+		$posizTekElementa = 0;
 
-	   
+		while ( isset($this->haystack[$posizTekElementa]) ) { 
+			
+			$okoshe4ko ='';
+
+			for ( $j = $posizTekElementa; $j < $posizTekElementa+$rasmerOkna; $j++ ) {
+				
+				$okoshe4ko .= $this->haystack[$j]; 
+			}             
+	        
+			if ( $okoshe4ko == $this->needle ) {
+				return $posizTekElementa;
+			} 
+
+			$posizTekElementa++;
+	  	}
+
+	  	return false;
 	}
 
 }
 
 
-$haystack ='cabr';
-$needle = 'ab';
-var_dump(my_strpos( $haystack, $needle) );
+$obg = new My_strpos;
+$obg->haystack ='cabrcabr';
+$obg->needle = 'ab';
 
-?>
+var_dump($obg->my_strpos());
+
+
